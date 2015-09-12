@@ -1,0 +1,17 @@
+Title: kirbylog
+
+----
+
+Author: Kim Franken
+
+----
+
+Description: This is kirbylog, a lightweight blog for Kirby CMS.
+
+----
+
+Keywords: Kirby,CMS,blog
+
+----
+
+Copyright: © 2015-(date: Year) (link: http://getkirby.com text: Kirby)

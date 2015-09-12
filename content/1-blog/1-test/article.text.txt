@@ -1,0 +1,14 @@
+Title: Text Post
+
+----
+
+Text: 
+
+This is a test Text Post   
+New line
+
+New paragraph
+
+----
+
+Date: 2015-09-12
