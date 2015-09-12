@@ -1,0 +1,13 @@
+.htaccess
+panel/
+kirby/
+site/accounts/
+site/cache/
+site/config/
+thumbs/
+index.php
+assets/css/main.css
+assets/fonts/sourcesanspro-300.woff
+assets/fonts/sourcesanspro-400-italic.woff
+assets/fonts/sourcesanspro-400.woff
+assets/fonts/sourcesanspro-600.woff
