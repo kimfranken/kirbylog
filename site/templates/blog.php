@@ -2,7 +2,7 @@
 
   <main class="main" role="main">
     <section class="content blog">
-      <?php $articles = $page->children()->visible()->flip()->paginate(10) ?>
+      <?php $articles = $page->children()->visible()->flip()->paginate(3) ?>
       <?php foreach($articles as $article): ?>
 
         <?php if($article->template() == 'article.text'): // text posts ?>
@@ -33,17 +33,47 @@
               </a>
               <p class="meta">
                 <time datetime="<?php echo $article->date('c') ?>"><?php echo $article->date('d.m.Y'); ?></time>
+              </p>
             </header>
             <?php echo $article->text()->kirbytext() ?>
           </article>
         <?php elseif($article->template() == 'article.video'): // video posts ?>
           <article class="article-video">
-
+            <header>
+              <a href="<?php echo $article->url() ?>">
+                <h1><?php echo $article->title()->html() ?></h1>
+              </a>
+              <p class="meta">
+                <time datetime="<?php echo $article->date('c') ?>"><?php echo $article->date('d.m.Y'); ?></time>
+              </p>
+            </header>
+            <?php
+              if ($article->youtube() != ""){
+                echo youtube($article->youtube());
+              }
+              elseif ($article->vimeo() != ""){
+                echo vimeo($article->vimeo());
+              }?>
+            <?php echo kirbytext($article->text()) ?>
           </article>
         <?php endif ?>
         <hr>
+
       <?php endforeach ?>
     </section>
+
+    <?php if($articles->pagination()->hasPages()): // pagination ?>
+      <nav class="pagination cf">
+        <?php if($articles->pagination()->hasPrevPage()): ?>
+          <a class="button prev" href="<?php echo $articles->pagination()->prevPageURL() ?>">neuere</a>
+        <?php endif ?>
+        <?php if($articles->pagination()->hasNextPage()): ?>
+          <a class="button next" href="<?php echo $articles->pagination()->nextPageURL() ?>">ältere</a>
+        <?php endif ?>
+      </nav>
+    <?php endif ?>
+
   </main>
+
 
 <?php snippet('footer') ?>
