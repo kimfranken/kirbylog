@@ -7,6 +7,7 @@ pages:
   template:
     - article.text
     - article.link
+    - article.video
 files: false
 fields:
   title:
