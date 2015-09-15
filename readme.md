@@ -10,11 +10,14 @@ kirbylog is a lightweight blog for Kirby.
  - video
 - pagination
 - search
+- RSS
 
 planned:
 
-- RSS
 - tags
 
+## Installation
+
 Add the following line to site/config/config.php:
+
   c::set('home', 'blog');
