@@ -11,3 +11,7 @@ Link: https://www.reddit.com/
 ----
 
 Text: Reddit ist cool
+
+----
+
+Tags: reddit,link

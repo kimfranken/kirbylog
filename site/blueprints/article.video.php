@@ -14,6 +14,9 @@ fields:
     width: 1/2
     format: DD.MM.YYYY
     required: true
+  tags:
+    label: Tags
+    type: tags
   youtube:
     label: YouTube
     width: 1/2

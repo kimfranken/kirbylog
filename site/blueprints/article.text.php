@@ -13,7 +13,10 @@ fields:
     type: date
     width: 1/2
     format: DD.MM.YYYY
-    required: true  
+    required: true
+  tags:
+    label: Tags
+    type: tags
   text:
     label: Text
     type:  textarea

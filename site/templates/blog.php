@@ -20,7 +20,13 @@
             'format' => '{minutesCount} {minutesLabel}, {secondsCount} {secondsLabel}',
             'format.alt' => '{secondsCount} {secondsLabel}',
             'format.alt.enable' => true
-          )) ?></p>
+          )) ?><?php if ($article->tags() != ''): ?> |
+                <ul class="tags">
+                  <?php foreach(str::split($article->tags()) as $tag): ?>
+                    <li><a href="<?php echo url('tag:' . urlencode($tag)) ?>">#<?php echo $tag; ?></a></li>
+                  <?php endforeach ?>
+                </ul>
+              <?php endif ?></p>
             </header>
             <?php echo $article->text()->kirbytext() ?>
 
@@ -33,6 +39,13 @@
               </a>
               <p class="meta">
                 <time datetime="<?php echo $article->date('c') ?>"><?php echo $article->date('d.m.Y'); ?></time>
+                <?php if ($article->tags() != ''): ?> |
+                  <ul class="tags">
+                    <?php foreach(str::split($article->tags()) as $tag): ?>
+                      <li><a href="<?php echo url('tag:' . urlencode($tag)) ?>">#<?php echo $tag; ?></a></li>
+                    <?php endforeach ?>
+                  </ul>
+                <?php endif ?>
               </p>
             </header>
             <?php echo $article->text()->kirbytext() ?>
@@ -45,6 +58,13 @@
               </a>
               <p class="meta">
                 <time datetime="<?php echo $article->date('c') ?>"><?php echo $article->date('d.m.Y'); ?></time>
+                <?php if ($article->tags() != ''): ?> |
+                  <ul class="tags">
+                    <?php foreach(str::split($article->tags()) as $tag): ?>
+                      <li><a href="<?php echo url('tag:' . urlencode($tag)) ?>">#<?php echo $tag; ?></a></li>
+                    <?php endforeach ?>
+                  </ul>
+                <?php endif ?>
               </p>
             </header>
             <?php

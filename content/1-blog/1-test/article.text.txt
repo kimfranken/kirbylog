@@ -12,3 +12,7 @@ New paragraph
 ----
 
 Date: 2015-09-12
+
+----
+
+Tags: text
