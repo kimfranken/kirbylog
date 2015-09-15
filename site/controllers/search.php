@@ -4,7 +4,7 @@ return function($site, $pages, $page) {
 
   $query   = get('q');
   $results = $site->index()->visible()->search($query, 'title|text');
-  $results = $results->paginate(20);
+  $results = $results->paginate(1);
 
   return array(
     'query'      => $query,

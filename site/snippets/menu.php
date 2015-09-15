@@ -8,4 +8,9 @@
     <?php endforeach ?>
   </ul>
 
+  <form action="<?php echo url('search') ?>">
+    <input type="search" name="q" placeholder="Search...">
+    <input type="submit" value="Search">
+  </form>
+
 </nav>
