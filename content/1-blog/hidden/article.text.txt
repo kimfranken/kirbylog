@@ -1,0 +1,9 @@
+Title: hidden
+
+----
+
+Date: 2015-09-18
+
+----
+
+Text: This is a hidden article.
