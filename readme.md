@@ -9,12 +9,12 @@ kirbylog is a lightweight blog for Kirby.
  - link
  - video
 - pagination
+- search
 
 planned:
 
 - RSS
 - tags
-- search
 
 Add the following line to site/config/config.php:
   c::set('home', 'blog');
