@@ -11,10 +11,11 @@ kirbylog is a lightweight blog for Kirby.
 - pagination
 - search
 - RSS
+- tags
 
 planned:
 
-- tags
+- nice css
 
 ## Installation
 

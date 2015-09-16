@@ -2,7 +2,6 @@
 
   <main class="main" role="main">
     <section class="content blog">
-      <?php $articles = $page->children()->visible()->flip()->paginate(3) ?>
       <?php foreach($articles as $article): ?>
 
         <?php if($article->template() == 'article.text'): // text posts ?>
@@ -82,18 +81,17 @@
       <?php endforeach ?>
     </section>
 
-    <?php if($articles->pagination()->hasPages()): // pagination ?>
+    <?php if($pagination->hasPages()): // pagination ?>
       <nav class="pagination cf">
-        <?php if($articles->pagination()->hasPrevPage()): ?>
-          <a class="button prev" href="<?php echo $articles->pagination()->prevPageURL() ?>">neuere</a>
+        <?php if($pagination->hasPrevPage()): ?>
+          <a class="button prev" href="<?php echo $pagination->prevPageURL() ?>">neuere</a>
         <?php endif ?>
-        <?php if($articles->pagination()->hasNextPage()): ?>
-          <a class="button next" href="<?php echo $articles->pagination()->nextPageURL() ?>">ältere</a>
+        <?php if($pagination->hasNextPage()): ?>
+          <a class="button next" href="<?php echo $pagination->nextPageURL() ?>">ältere</a>
         <?php endif ?>
       </nav>
     <?php endif ?>
 
   </main>
-
 
 <?php snippet('footer') ?>
